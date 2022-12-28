@@ -7,7 +7,7 @@ export const LoginButton = () => {
   if (session) {
     return (
       <>
-        Signed in as {session.user?.email} <br />
+        Signed in as {session.user?.name} <br />
         <Button onClick={() => void signOut()}>Sign Out</Button>
       </>
     )
@@ -15,7 +15,7 @@ export const LoginButton = () => {
     return (
       <>
         Not signed in <br />
-        <Button onClick={() => void signIn()}>Sign In</Button>
+        <Button onClick={() => void signIn('slack')}>Sign In</Button>
       </>
     )
   }

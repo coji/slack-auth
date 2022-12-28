@@ -1,13 +1,13 @@
 import NextAuth from 'next-auth'
-import GithubProvider from 'next-auth/providers/github'
-export const authOptions = {
+import SlackProvider from 'next-auth/providers/slack'
+
+export default NextAuth({
   // Configure one or more authentication providers
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID ?? '',
-      clientSecret: process.env.GITHUB_SECRET ?? '',
+    SlackProvider({
+      clientId: process.env.SLACK_CLIENT_ID ?? '',
+      clientSecret: process.env.SLACK_CLIENT_SECRET ?? '',
     }),
     // ...add more providers here
   ],
-}
-export default NextAuth(authOptions)
+})
