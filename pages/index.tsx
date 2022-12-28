@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Box } from '@chakra-ui/react'
+import { LoginButton } from '../components/login-button'
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <Box mt="4" bgColor="red" p="4" mx="2" width="120">
+        <Box w="120" mt="4" mx="2" p="4" bgColor="red">
           Hello!
         </Box>
+        <LoginButton />
       </main>
     </>
   )

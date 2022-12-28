@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   extends: [
     'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
@@ -24,5 +24,3 @@ const config = {
     },
   },
 }
-
-export default config

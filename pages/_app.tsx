@@ -1,8 +1,7 @@
 import type { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
-import { extendTheme } from '@chakra-ui/react'
 const colors = {
   brand: {
     900: '#1a365d',
@@ -17,6 +16,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     <SessionProvider session={session}>
       <ChakraProvider resetCSS theme={theme}>
         <Component {...pageProps} />
